@@ -1,0 +1,12 @@
+{
+  "users":[
+    {"id":"u1","username":"admin","password":"museum2050","role":"admin"},
+    {"id":"u2","username":"curator","password":"curator2050","role":"editor"},
+    {"id":"u3","username":"viewer","password":"viewer2050","role":"viewer"}
+  ],
+  "items":[
+    {"id":"tut","title":"Golden Mask of Tutankhamun","era":"New Kingdom · 18th Dynasty","date":"c. 1323 BCE","category":"Royalty","symbol":"𓅓","description":"A ceremonial funerary mask discovered in the tomb of Tutankhamun in the Valley of the Kings."},
+    {"id":"nefertiti","title":"Bust of Nefertiti","era":"New Kingdom · Amarna Period","date":"c. 1345 BCE","category":"Portrait","symbol":"𓁟","description":"A limestone portrait associated with the royal workshop at Amarna and the reign of Akhenaten."},
+    {"id":"scarab","title":"Heart Scarab","era":"Middle Kingdom · 12th Dynasty","date":"c. 1900 BCE","category":"Amulets","symbol":"𓆣","description":"A protective amulet placed with the deceased, symbolizing rebirth, protection and the journey beyond life."}
+  ]
+}
