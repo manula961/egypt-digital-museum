@@ -1,0 +1,2 @@
+"use client";
+export default function Error({reset}){return <main className="errorPage"><div><h1>Something went wrong.</h1><p>The museum could not load this section.</p><button className="primary" onClick={()=>reset()}>Try again</button></div></main>;}
