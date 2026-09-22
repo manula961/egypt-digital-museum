@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="errorPage"><div><h1>Page not found.</h1><p>The requested museum page does not exist.</p><a className="primary" href="/">Return to museum</a></div></main>;}
