@@ -2,11 +2,29 @@
 import { useEffect } from "react";
 
 const models={
-  "tut-mask":"992c57047cdf4412b970ad798d5ad0c9",
-  rosetta:"1e03509704a3490e99a173e53b93e282",
-  nefertiti:"4e51f291136f4b3f8cdb44c9fbe9b1dd",
+  narmer:"cdd70f3f6c0a4c8ab99db6ec9194f7da",
+  djoser:"868a742ead1f4181bda326b37b0cd979",
+  khufu:"01810314feca4415a33a51dd151eacb3",
+  sphinx:"b2b6cd14feed451b9ca8a13ff1fe0ff6",
+  menkaure:"d82a055805c04ec099ddd02341aa7875",
+  "rah":"be699d5cd26e4c2fa831cca6651b9212",
+  "reserve-head":"f3daf4418259431d8ead362378892b74",
   "khafre-statue":"071b25978c054c73bd179f89c33a5ffe",
-  ramesses:"4fdb2b2cb9e14f12ac7c11f385ce0104"
+  senusret:"eca243532f714649a3166cd6ec000705",
+  mentuhotep:"a3349ff11319477283d0551b9af907ed",
+  "hatshepsut-temple":"5bc88658fc5e458f8f25af8a0ac9ee7b",
+  "tut-mask":"992c57047cdf4412b970ad798d5ad0c9",
+  "tut-dagger":"505fdc27fc1a4fcaa0e2239fb4b36f99",
+  "tut-chariots":"d29a834451014363a789edcc28ed90eb",
+  nefertiti:"8c60faca6152405e9d35784efa8b9aa1",
+  ramesses:"4fdb2b2cb9e14f12ac7c11f385ce0104",
+  "abu-simbel":"30b16b33c6834cb9aacb6d739a0b7789",
+  karnak:"55ed0dea80994647a23e75afdc0384de",
+  "luxor-temple":"f66e32b85d454562a0618b3b4dcb5956",
+  edfu:"05f32f1da60f4cf58f8c95adc3fbfeb9",
+  philae:"3f7df78558544bf09291937b06bf3e66",
+  rosetta:"1e03509704a3490e99a173e53b93e282",
+  fayum:"a35b4e52b0a6433d9e7df11d6217f4e0"
 };
 
 export default function ArtifactModal({artifact,onClose}){
