@@ -1,0 +1,1 @@
+export default function Loading(){return <main className="loading" aria-live="polite"><span>Loading the museum…</span></main>;}
