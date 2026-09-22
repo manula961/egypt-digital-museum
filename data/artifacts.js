@@ -24,7 +24,7 @@ export const artifacts = [
   { id:"ramesses", title:"Colossus of Ramesses II", era:"New Kingdom", date:"c. 13th century BCE", type:"Monumental Sculpture", symbol:"𓁶", text:"A monumental royal image representing the power and long reign of Ramesses II." },
   { id:"abu-simbel", title:"Temples of Abu Simbel", era:"New Kingdom", date:"c. 1265 BCE", type:"Architecture", symbol:"𓉐", text:"Rock-cut temples commissioned by Ramesses II and dedicated to divine and royal figures." },
   { id:"merneptah", title:"Merneptah Stele", era:"New Kingdom", date:"c. 1208 BCE", type:"Royal Inscription", symbol:"𓏏", text:"A royal victory inscription of Pharaoh Merneptah containing one of the earliest known references to Israel." },
-  { id:"tanis-mask", title:"Silver Mask of Psusennes I", era:"New Kingdom", date:"c. 11th century BCE", type:"Funerary Art", symbol:"𓂀", text:"An elaborate silver funerary mask associated with Pharaoh Psusennes I." },
+  { id:"tanis-mask", title:"Silver Mask of Psusennes I", era:"Third Intermediate Period", date:"c. 11th century BCE", type:"Funerary Art", symbol:"𓂀", text:"An elaborate silver funerary mask associated with Pharaoh Psusennes I." },
   { id:"shabti", title:"Shabti Figures", era:"New Kingdom", date:"c. 16th–11th century BCE", type:"Funerary Figure", symbol:"𓏏", text:"Small servant figures placed in burials to perform work for the deceased in the afterlife." },
   { id:"coffin", title:"Decorated Egyptian Coffin", era:"New Kingdom", date:"c. 14th–11th century BCE", type:"Funerary Object", symbol:"𓋹", text:"Painted and inscribed coffins protected the deceased and expressed beliefs about rebirth." },
   { id:"dendera", title:"Temple of Dendera", era:"Ptolemaic Egypt", date:"c. 2nd–1st century BCE", type:"Architecture", symbol:"𓉐", text:"A monumental temple complex dedicated primarily to Hathor, developed extensively during the Ptolemaic period." },
@@ -36,8 +36,8 @@ export const artifacts = [
   { id:"fayum", title:"Fayum Portraits", era:"Roman Egypt", date:"1st–3rd century CE", type:"Funerary Portrait", symbol:"𓂀", text:"Naturalistic painted portraits attached to Roman-period Egyptian mummies, especially from the Fayum region." },
   { id:"kom-ombo", title:"Temple of Kom Ombo", era:"Roman Egypt", date:"c. 180–47 BCE", type:"Architecture", symbol:"𓉐", text:"A distinctive double temple dedicated to Sobek and Horus the Elder, expanded through the Ptolemaic and Roman periods." },
   { id:"alexandria", title:"Alexandrian Glassware", era:"Roman Egypt", date:"1st–3rd century CE", type:"Craft Object", symbol:"𓏏", text:"Decorative glass objects reflecting the sophisticated craft traditions of Greco-Roman Egypt." },
-  { id:"coptic-textile", title:"Coptic Textiles", era:"Roman Egypt", date:"3rd–7th century CE", type:"Textile Art", symbol:"𓂀", text:"Decorated textiles from late antique Egypt combining Egyptian, Greek, Roman and Christian visual traditions." }
-  { id:"den-stela", title:"Stela of Djet", era:"Early Dynastic", date:"c. 3000 BCE", type:"Royal Stela", symbol:"𓏏", text:"An early royal stela illustrating the emergence of formal Egyptian writing and kingship imagery." },
+  { id:"coptic-textile", title:"Coptic Textiles", era:"Roman Egypt", date:"3rd–7th century CE", type:"Textile Art", symbol:"𓂀", text:"Decorated textiles from late antique Egypt combining Egyptian, Greek, Roman and Christian visual traditions." },
+  { id:"djet-stela", title:"Stela of Djet", era:"Early Dynastic", date:"c. 3000 BCE", type:"Royal Stela", symbol:"𓏏", text:"An early royal stela illustrating the emergence of formal Egyptian writing and kingship imagery." }, title:"Stela of Djet", era:"Early Dynastic", date:"c. 3000 BCE", type:"Royal Stela", symbol:"𓏏", text:"An early royal stela illustrating the emergence of formal Egyptian writing and kingship imagery." },
   { id:"hetepdi", title:"Hetepheres I Furniture", era:"Old Kingdom", date:"c. 26th century BCE", type:"Royal Furniture", symbol:"𓋹", text:"Furniture and funerary equipment from the tomb of Queen Hetepheres I reveal elite craftsmanship of the Fourth Dynasty." },
   { id:"reserve-head", title:"Reserve Head", era:"Old Kingdom", date:"c. 26th century BCE", type:"Funerary Sculpture", symbol:"𓁶", text:"Distinctive stone heads placed in elite burials, possibly connected with funerary protection and representation." },
   { id:"rah", title:"Seated Scribe", era:"Old Kingdom", date:"c. 2620–2500 BCE", type:"Sculpture", symbol:"𓁐", text:"A naturalistic painted limestone figure representing a seated official or scribe." },
@@ -62,8 +62,8 @@ export const artifacts = [
   { id:"tut-funerary-mask", title:"Tutankhamun Canopic Mask", era:"New Kingdom", date:"c. 14th century BCE", type:"Funerary Art", symbol:"𓋹", text:"A gold funerary object from Tutankhamun's burial equipment decorated with royal imagery." },
   { id:"book-amduat", title:"Amduat Papyrus", era:"New Kingdom", date:"c. 16th–11th century BCE", type:"Funerary Papyrus", symbol:"𓂀", text:"Funerary texts describing the sun god's nightly journey through the underworld." },
   { id:"weighing-heart", title:"Weighing of the Heart Scene", era:"New Kingdom", date:"c. 16th–11th century BCE", type:"Funerary Art", symbol:"𓂀", text:"A recurring afterlife scene showing the deceased's heart weighed against the feather of Ma'at." },
-  { id:"shoshenq", title:"Shoshenq I Reliefs", era:"New Kingdom", date:"c. 10th century BCE", type:"Royal Relief", symbol:"𓏏", text:"Temple reliefs commemorate military campaigns and royal achievements of the early Third Intermediate Period." },
-  { id:"tanis-sphinx", title:"Sphinx of Amenemhat III from Tanis", era:"Ptolemaic Egypt", date:"c. 19th century BCE", type:"Sculpture", symbol:"𓁷", text:"A monumental sphinx later reused at Tanis, demonstrating the long afterlife of Middle Kingdom royal sculpture." },
+  { id:"shoshenq", title:"Shoshenq I Reliefs", era:"Third Intermediate Period", date:"c. 10th century BCE", type:"Royal Relief", symbol:"𓏏", text:"Temple reliefs commemorate military campaigns and royal achievements of the early Third Intermediate Period." },
+  { id:"tanis-sphinx", title:"Sphinx of Amenemhat III from Tanis", era:"Middle Kingdom", date:"c. 19th century BCE", type:"Sculpture", symbol:"𓁷", text:"A monumental sphinx later reused at Tanis, demonstrating the long afterlife of Middle Kingdom royal sculpture." },
   { id:"canopic-jars", title:"Egyptian Canopic Jars", era:"Ptolemaic Egypt", date:"c. 1st millennium BCE", type:"Funerary Object", symbol:"𓋹", text:"Containers used to preserve the internal organs of the deceased as part of Egyptian mummification." },
   { id:"isis-philae", title:"Isis Temple Reliefs at Philae", era:"Ptolemaic Egypt", date:"c. 3rd–1st century BCE", type:"Relief Art", symbol:"𓂀", text:"Elaborate reliefs celebrate Isis and preserve the continuation of traditional Egyptian religious imagery." },
   { id:"horus-edfu", title:"Horus Relief at Edfu", era:"Ptolemaic Egypt", date:"c. 3rd–1st century BCE", type:"Relief Art", symbol:"𓁷", text:"Temple reliefs at Edfu depict Horus, divine processions, rituals and royal offerings." },
@@ -75,13 +75,14 @@ export const artifacts = [
   { id:"coptic-icon", title:"Early Coptic Icon", era:"Roman Egypt", date:"c. 5th–7th century CE", type:"Religious Art", symbol:"𓂀", text:"Early Christian visual culture in Egypt developed distinctive iconographic and artistic traditions." }
 ];
 
-export const eras = ["All","Early Dynastic","Old Kingdom","Middle Kingdom","New Kingdom","Ptolemaic Egypt","Roman Egypt"];
+export const eras = ["All","Early Dynastic","Old Kingdom","Middle Kingdom","New Kingdom","Third Intermediate Period","Ptolemaic Egypt","Roman Egypt"];
 
 export const timeline = [
   ["3100 BCE","Early Dynastic","The unification of Upper and Lower Egypt and the beginning of dynastic rule."],
   ["2686 BCE","Old Kingdom","The age of pyramids, monumental stone architecture and royal funerary complexes."],
   ["2055 BCE","Middle Kingdom","A period of reunification, literature, administration and artistic development."],
   ["1550 BCE","New Kingdom","Egypt reaches extraordinary political, military and artistic power."],
+  ["1070 BCE","Third Intermediate Period","Egypt experiences divided rule and powerful regional priestly and royal centers."],
   ["332 BCE","Ptolemaic","Greek and Egyptian traditions meet under the Ptolemaic dynasty."],
   ["30 BCE","Roman Egypt","Egypt becomes a province of the Roman Empire, beginning a new cultural period."]
 ];
