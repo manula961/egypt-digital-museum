@@ -2,10 +2,11 @@
 import { useEffect } from "react";
 const modelEmbeds={
   "tut-mask":"https://sketchfab.com/models/992c57047cdf4412b970ad798d5ad0c9/embed?autospin=1&autostart=1&preload=1",
-  rosetta:"https://sketchfab.com/models/a61c7f4f81e04814880eb806a412e30c/embed?autospin=1&autostart=1&preload=1",
+  rosetta:"https://sketchfab.com/models/a61c7f4f81e04847930ebed04585fb50/embed?autospin=1&autostart=1&preload=1",
   ramesses:"https://sketchfab.com/models/42cc89bb3fd840d7b0356bd536379a92/embed?autospin=1&autostart=1&preload=1",
   amenhotep:"https://sketchfab.com/models/cb2ea90e64c64bcc99ae6b8dbb3429de/embed?autospin=1&autostart=1&preload=1",
-  "tanis-mask":"https://sketchfab.com/models/3a674bd8c08b463daa32f6063c9d89a1/embed?autospin=1&autostart=1&preload=1"
+  nefertiti:"https://sketchfab.com/models/4e51f291136f4b3f8cdb44c9fbe9b1dd/embed?autostart=1",
+  "khafre-statue":"https://sketchfab.com/models/071b25978c054c73bd179f89c33a5ffe/embed?autostart=1"
 };
 export default function ArtifactModal({artifact,onClose}){
   useEffect(()=>{if(!artifact)return;const onKey=e=>e.key==="Escape"&&onClose();document.addEventListener("keydown",onKey);const previous=document.activeElement;return()=>{document.removeEventListener("keydown",onKey);previous?.focus?.()}},[artifact,onClose]);
