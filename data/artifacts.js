@@ -1,17 +1,51 @@
 export const artifacts = [
-  { id:"tut", title:"Mask of Tutankhamun", era:"New Kingdom", date:"c. 1323 BCE", type:"Royal Art", symbol:"𓂀", text:"The iconic funerary mask of Pharaoh Tutankhamun, associated with the royal burial tradition of the New Kingdom." },
+  { id:"narmer", title:"Narmer Palette", era:"Early Dynastic", date:"c. 3100 BCE", type:"Ceremonial Palette", symbol:"𓂀", text:"A ceremonial palette associated with King Narmer and the unification of Upper and Lower Egypt." },
+  { id:"den", title:"Stela of King Den", era:"Early Dynastic", date:"c. 3000 BCE", type:"Royal Stela", symbol:"𓉐", text:"An early royal monument from the First Dynasty illustrating the development of Egyptian kingship and hieroglyphic tradition." },
+  { id:"djoser", title:"Step Pyramid of Djoser", era:"Old Kingdom", date:"c. 2670 BCE", type:"Architecture", symbol:"𓉴", text:"The monumental Step Pyramid complex at Saqqara, one of Egypt's earliest large stone architectural achievements." },
+  { id:"khufu", title:"Great Pyramid of Giza", era:"Old Kingdom", date:"c. 2560 BCE", type:"Architecture", symbol:"𓉴", text:"The largest pyramid at Giza and the only surviving monument of the Seven Wonders of the Ancient World." },
+  { id:"khafre", title:"Pyramid of Khafre", era:"Old Kingdom", date:"c. 2558 BCE", type:"Architecture", symbol:"𓉴", text:"The second-largest pyramid at Giza, traditionally associated with Pharaoh Khafre." },
+  { id:"sphinx", title:"Great Sphinx of Giza", era:"Old Kingdom", date:"c. 2500 BCE", type:"Monumental Sculpture", symbol:"𓁷", text:"A colossal limestone monument with a lion's body and human head near the Giza pyramids." },
+  { id:"menkaure", title:"Triad of Menkaure", era:"Old Kingdom", date:"c. 2530 BCE", type:"Sculpture", symbol:"𓁐", text:"A group of royal sculptures portraying Menkaure with protective and divine figures." },
+  { id:"pepi", title:"Pyramid Texts of Unas", era:"Old Kingdom", date:"c. 24th century BCE", type:"Funerary Text", symbol:"𓏏", text:"Sacred funerary inscriptions preserved in the pyramid of Unas at Saqqara." },
+  { id:"senusret", title:"White Chapel of Senusret I", era:"Middle Kingdom", date:"c. 1950 BCE", type:"Architecture", symbol:"𓉐", text:"A finely carved ceremonial kiosk associated with the Middle Kingdom ruler Senusret I." },
+  { id:"mentuhotep", title:"Temple of Mentuhotep II", era:"Middle Kingdom", date:"c. 2000 BCE", type:"Architecture", symbol:"𓉐", text:"A monumental mortuary complex at Deir el-Bahari linked to the reunification of Egypt." },
+  { id:"sphinx-amenemhat", title:"Sphinx of Amenemhat III", era:"Middle Kingdom", date:"c. 19th century BCE", type:"Sculpture", symbol:"𓁷", text:"A royal sphinx combining leonine power with the identity of Pharaoh Amenemhat III." },
+  { id:"sobek", title:"Crocodile Statue of Sobek", era:"Middle Kingdom", date:"c. 19th–18th century BCE", type:"Religious Sculpture", symbol:"𓆊", text:"A representation of the crocodile deity Sobek, associated with fertility, the Nile and royal power." },
+  { id:"hatshepsut", title:"Head of Hatshepsut", era:"New Kingdom", date:"c. 1479–1458 BCE", type:"Royal Sculpture", symbol:"𓁐", text:"A royal portrait connected with Pharaoh Hatshepsut and the artistic programme of her reign." },
+  { id:"hatshepsut-temple", title:"Temple of Hatshepsut", era:"New Kingdom", date:"c. 15th century BCE", type:"Architecture", symbol:"𓉐", text:"The celebrated terraced mortuary temple at Deir el-Bahari dedicated to Hatshepsut." },
+  { id:"tut-mask", title:"Mask of Tutankhamun", era:"New Kingdom", date:"c. 1323 BCE", type:"Royal Art", symbol:"𓂀", text:"The famous gold funerary mask discovered in the tomb of Tutankhamun." },
+  { id:"tut-throne", title:"Golden Throne of Tutankhamun", era:"New Kingdom", date:"c. 14th century BCE", type:"Royal Furniture", symbol:"𓋹", text:"A richly decorated royal throne found among the treasures of Tutankhamun's tomb." },
+  { id:"tut-dagger", title:"Dagger of Tutankhamun", era:"New Kingdom", date:"c. 14th century BCE", type:"Royal Object", symbol:"𓆑", text:"A ceremonial dagger from Tutankhamun's burial assemblage with an iron blade and decorated fittings." },
+  { id:"tut-canopic", title:"Canopic Coffinette of Tutankhamun", era:"New Kingdom", date:"c. 14th century BCE", type:"Funerary Object", symbol:"𓋹", text:"One of the elaborate funerary containers created for Tutankhamun's burial." },
+  { id:"nefertiti", title:"Bust of Nefertiti", era:"New Kingdom", date:"c. 1345 BCE", type:"Sculpture", symbol:"𓁐", text:"A celebrated limestone portrait associated with Queen Nefertiti and the Amarna artistic tradition." },
+  { id:"akhenaten", title:"Colossal Statue of Akhenaten", era:"New Kingdom", date:"c. 14th century BCE", type:"Royal Sculpture", symbol:"𓁶", text:"A monumental representation of Akhenaten reflecting the distinctive artistic style of the Amarna period." },
+  { id:"amarnaletter", title:"Amarna Letters", era:"New Kingdom", date:"c. 14th century BCE", type:"Writing", symbol:"𓏏", text:"Diplomatic correspondence preserved on clay tablets, revealing international relations during the Amarna period." },
+  { id:"book-dead", title:"Book of the Dead Papyrus", era:"New Kingdom", date:"c. 16th–11th century BCE", type:"Funerary Papyrus", symbol:"𓂀", text:"Illustrated funerary manuscripts containing spells and guidance for the journey into the afterlife." },
+  { id:"ramesses", title:"Colossus of Ramesses II", era:"New Kingdom", date:"c. 13th century BCE", type:"Monumental Sculpture", symbol:"𓁶", text:"A monumental royal image representing the power and long reign of Ramesses II." },
+  { id:"abu-simbel", title:"Temples of Abu Simbel", era:"New Kingdom", date:"c. 1265 BCE", type:"Architecture", symbol:"𓉐", text:"Rock-cut temples commissioned by Ramesses II and dedicated to divine and royal figures." },
+  { id:"merneptah", title:"Merneptah Stele", era:"New Kingdom", date:"c. 1208 BCE", type:"Royal Inscription", symbol:"𓏏", text:"A royal victory inscription of Pharaoh Merneptah containing one of the earliest known references to Israel." },
+  { id:"tanis-mask", title:"Silver Mask of Psusennes I", era:"New Kingdom", date:"c. 11th century BCE", type:"Funerary Art", symbol:"𓂀", text:"An elaborate silver funerary mask associated with Pharaoh Psusennes I." },
+  { id:"shabti", title:"Shabti Figures", era:"New Kingdom", date:"c. 16th–11th century BCE", type:"Funerary Figure", symbol:"𓏏", text:"Small servant figures placed in burials to perform work for the deceased in the afterlife." },
+  { id:"coffin", title:"Decorated Egyptian Coffin", era:"New Kingdom", date:"c. 14th–11th century BCE", type:"Funerary Object", symbol:"𓋹", text:"Painted and inscribed coffins protected the deceased and expressed beliefs about rebirth." },
+  { id:"dendera", title:"Temple of Dendera", era:"Ptolemaic Egypt", date:"c. 2nd–1st century BCE", type:"Architecture", symbol:"𓉐", text:"A monumental temple complex dedicated primarily to Hathor, developed extensively during the Ptolemaic period." },
   { id:"rosetta", title:"Rosetta Stone", era:"Ptolemaic Egypt", date:"196 BCE", type:"Writing", symbol:"𓏏", text:"A trilingual decree that played a central role in the decipherment of Egyptian hieroglyphic writing." },
-  { id:"nefertiti", title:"Bust of Nefertiti", era:"New Kingdom", date:"c. 1345 BCE", type:"Sculpture", symbol:"𓁐", text:"A celebrated limestone portrait associated with Queen Nefertiti and the artistic world of Amarna." },
-  { id:"pyramid", title:"Great Pyramid of Giza", era:"Old Kingdom", date:"c. 2560 BCE", type:"Architecture", symbol:"𓉴", text:"The largest pyramid at Giza and the oldest and largest of the Seven Wonders of the Ancient World." }
+  { id:"edfu", title:"Temple of Edfu", era:"Ptolemaic Egypt", date:"237–57 BCE", type:"Architecture", symbol:"𓉐", text:"A remarkably preserved temple dedicated to the falcon-headed god Horus." },
+  { id:"philae", title:"Temple Complex of Philae", era:"Ptolemaic Egypt", date:"c. 3rd–1st century BCE", type:"Architecture", symbol:"𓉐", text:"A temple complex dedicated especially to Isis, developed over several periods of Egyptian history." },
+  { id:"cleopatra", title:"Head of Cleopatra VII", era:"Ptolemaic Egypt", date:"1st century BCE", type:"Royal Sculpture", symbol:"𓁐", text:"A portrait type associated with Cleopatra VII, the final active ruler of the Ptolemaic dynasty." },
+  { id:"memphis-decree", title:"Decree of Memphis", era:"Ptolemaic Egypt", date:"196 BCE", type:"Royal Inscription", symbol:"𓏏", text:"The decree inscribed on the Rosetta Stone recording honours and privileges granted to temples." },
+  { id:"fayum", title:"Fayum Portraits", era:"Roman Egypt", date:"1st–3rd century CE", type:"Funerary Portrait", symbol:"𓂀", text:"Naturalistic painted portraits attached to Roman-period Egyptian mummies, especially from the Fayum region." },
+  { id:"kom-ombo", title:"Temple of Kom Ombo", era:"Roman Egypt", date:"c. 180–47 BCE", type:"Architecture", symbol:"𓉐", text:"A distinctive double temple dedicated to Sobek and Horus the Elder, expanded through the Ptolemaic and Roman periods." },
+  { id:"alexandria", title:"Alexandrian Glassware", era:"Roman Egypt", date:"1st–3rd century CE", type:"Craft Object", symbol:"𓏏", text:"Decorative glass objects reflecting the sophisticated craft traditions of Greco-Roman Egypt." },
+  { id:"coptic-textile", title:"Coptic Textiles", era:"Roman Egypt", date:"3rd–7th century CE", type:"Textile Art", symbol:"𓂀", text:"Decorated textiles from late antique Egypt combining Egyptian, Greek, Roman and Christian visual traditions." }
 ];
 
-export const eras = ["All","Old Kingdom","Middle Kingdom","New Kingdom","Ptolemaic Egypt"];
+export const eras = ["All","Early Dynastic","Old Kingdom","Middle Kingdom","New Kingdom","Ptolemaic Egypt","Roman Egypt"];
 
 export const timeline = [
-  ["3100 BCE","Early Dynastic","The unification of Upper and Lower Egypt."],
-  ["2686 BCE","Old Kingdom","The age of pyramids and monumental kingship."],
-  ["2055 BCE","Middle Kingdom","A period of reunification, literature and administrative development."],
-  ["1550 BCE","New Kingdom","Egypt reaches extraordinary political and artistic power."],
-  ["332 BCE","Ptolemaic","Greek and Egyptian traditions meet in a new kingdom."],
-  ["30 BCE","Roman Egypt","Egypt becomes a province of the Roman Empire."]
+  ["3100 BCE","Early Dynastic","The unification of Upper and Lower Egypt and the beginning of dynastic rule."],
+  ["2686 BCE","Old Kingdom","The age of pyramids, monumental stone architecture and royal funerary complexes."],
+  ["2055 BCE","Middle Kingdom","A period of reunification, literature, administration and artistic development."],
+  ["1550 BCE","New Kingdom","Egypt reaches extraordinary political, military and artistic power."],
+  ["332 BCE","Ptolemaic","Greek and Egyptian traditions meet under the Ptolemaic dynasty."],
+  ["30 BCE","Roman Egypt","Egypt becomes a province of the Roman Empire, beginning a new cultural period."]
 ];
