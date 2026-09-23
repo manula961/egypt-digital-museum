@@ -2,7 +2,8 @@
 
 > A responsive, interactive digital museum experience for exploring ancient Egyptian heritage.
 
-**Live:** https://egypt-digital-museum.vercel.app  
+**Live:** http://egyptora.devoraid.com  
+**Vercel:** https://egypt-digital-museum.vercel.app  
 **GitHub:** https://github.com/manula961/egypt-digital-museum
 
 ## 1. Overview
@@ -409,6 +410,10 @@ Deployment flow:
 
 Live site:
 
+http://egyptora.devoraid.com
+
+Vercel deployment:
+
 https://egypt-digital-museum.vercel.app
 
 ## 22. Code Quality
@@ -470,7 +475,9 @@ The project was built to demonstrate:
 
 **GitHub:** https://github.com/manula961/egypt-digital-museum
 
-**Live website:** https://egypt-digital-museum.vercel.app
+**Live website:** http://egyptora.devoraid.com
+
+**Vercel deployment:** https://egypt-digital-museum.vercel.app
 
 ## 27. License
 
