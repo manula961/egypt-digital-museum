@@ -1,131 +1,450 @@
-# Egypt Digital Museum
+# Egypt Digital Museum 🏺
 
-An immersive, responsive digital museum experience built for the CyberNex project.
+> A responsive, interactive digital museum experience for exploring ancient Egyptian heritage.
 
-## Stack
-- Next.js 16 App Router
-- React 19
-- React Three Fiber + Drei + Three.js
-- Supabase Auth + PostgreSQL + Row Level Security (RLS)
-- Responsive CSS with dark/night mode, reduced-motion support and accessible focus states
-- Vercel deployment
+**Live:** https://egypt-digital-museum.vercel.app  
+**GitHub:** https://github.com/manula961/egypt-digital-museum
 
-## Features
+## 1. Overview
+
+Egypt Digital Museum is a full-stack Next.js application created for the CyberNex project. It combines a searchable museum collection, historical learning, interactive 3D visualization, responsive design, day/night presentation, authentication, RBAC, and a Supabase-powered content management system.
+
+The public museum can be explored without an account. Administrative functionality is protected by server-side authentication and database-level authorization.
+
+## 2. Visitor Experience
+
+Visitors can:
+
+- Browse a curated collection of 74 museum objects.
+- Search the collection.
+- Filter by historical era.
+- Filter by museum category.
+- Open detailed artifact views.
+- Follow a visual history timeline.
+- Explore available artifacts in an interactive 3D gallery.
+- Switch between day and night museum presentation.
+- Use the experience on desktop, tablet, and mobile.
+- Continue using core museum information even when 3D content is unavailable.
+
+## 3. Features
+
+### Museum
+
 - Responsive museum landing page
-- 74-object searchable collection with era and category filters
-- Accessible artifact detail modal
-- Egypt history timeline
-- Interactive Three.js 3D gallery
-- Museum day/night mode
+- 74-object collection
+- Search
+- Era filters
+- Category filters
+- Robust category/object-type matching
+- Artifact detail modal
+- Historical timeline
+- Three.js 3D gallery
+- Day/night mode
 - Mobile navigation
-- Loading, error and not-found states
-- Category browsing with robust object-type matching
-- Supabase-backed museum categories and editable museum items
-- Protected `/admin` area with server-side role checks
-- Admin/editor RBAC enforced by Supabase RLS
-- Single designated admin account: `admin@egyptdigitalmuseum.local`
+- Loading, error, and not-found states
+- Reduced-motion support
+- Accessible focus states
 
-## Project Overview
+### Administration
 
-Egypt Digital Museum is an interactive web experience that presents ancient Egyptian heritage through a modern digital interface. The project combines a searchable artifact collection, historical context, interactive visualization, responsive layouts, and a protected content-management area.
+- Supabase authentication
+- Protected /admin route
+- Server-side authorization
+- Admin/editor/viewer roles
+- Museum item management
+- Category management
+- Admin-only destructive actions
+- PostgreSQL Row Level Security
 
-### Core experience
+## 4. Collection
 
-- **Discover:** Browse a curated collection of Egyptian artifacts.
-- **Search:** Find artifacts quickly by title and descriptive content.
-- **Explore by era:** Filter the collection across major historical periods.
-- **Explore by category:** Browse architecture, sculpture, royal art, funerary art, writing, jewelry and craft, and religious art.
-- **Learn:** Open detailed artifact views with historical descriptions and metadata.
-- **Visualize:** Explore the interactive Three.js/R3F gallery and available 3D artifact models.
-- **Follow the timeline:** Move through key periods of ancient Egyptian history.
-- **Personalize:** Switch between museum day and night presentation modes.
-- **Use on any device:** Responsive layouts support desktop, tablet and mobile screens.
+The current collection contains 74 objects.
 
-## Design & UX
+Each museum item can contain:
 
-The interface is designed around a museum-inspired visual language while keeping navigation familiar and accessible.
+| Field | Description |
+|---|---|
+| Title | Artifact name |
+| Slug | Stable identifier |
+| Era | Historical period |
+| Date label | Human-readable date |
+| Category | Museum classification |
+| Item type | Object classification |
+| Description | Educational information |
+| Symbol | UI representation |
+| Image URL | Optional image |
+| Model ID | Optional 3D model |
+| Timestamps | Creation/update tracking |
 
-- Responsive grid and mobile-first navigation
-- Clear information hierarchy for artifact discovery
-- Search and filtering designed for fast exploration
-- Accessible focus states and semantic interactive controls
-- Reduced-motion considerations
-- Loading, error and not-found states
-- Day/night presentation mode
-- Interactive artifact detail modal
-- 3D visualization separated from the main collection flow for progressive exploration
+### Categories
 
-## Collection & Data
+- Architecture
+- Sculpture
+- Royal Art
+- Funerary Art
+- Writing
+- Jewelry & Craft
+- Religious Art
 
-The application supports a structured museum catalog containing **74 collection objects** with metadata such as:
+## 5. 3D Gallery
 
-- Title and slug
-- Historical era and date label
-- Museum category
-- Artifact type
-- Description
-- Symbol/icon
-- Optional image
-- Optional 3D model reference
+The interactive gallery uses:
 
-Museum categories and editable content can be stored in Supabase PostgreSQL, allowing the collection to evolve without rebuilding the complete frontend catalog.
+- Three.js
+- React Three Fiber
+- Drei
+- WebGL
 
-## Interactive 3D Gallery
+It supports interactive object/camera presentation, model loading states, unavailable-model handling, and progressive 3D presentation.
 
-The museum includes a Three.js-powered 3D experience built with React Three Fiber and Drei.
+The main museum experience does not depend exclusively on WebGL, so artifact information remains usable when a model cannot load.
 
-The gallery is designed to demonstrate how cultural objects can be presented beyond static images, with interactive camera and object presentation where supported. The application also includes graceful handling for models that are unavailable or still loading.
+## 6. Design & UX
 
-## Architecture
+The visual design combines Egyptian museum-inspired presentation with modern web interaction.
 
-The project uses a modern Next.js App Router architecture:
+Design goals include:
 
-- **Next.js:** Application framework, routing and server rendering
-- **React:** Component-based UI
-- **React Three Fiber / Drei / Three.js:** 3D museum experiences
-- **Supabase:** Authentication, PostgreSQL data and Row Level Security
-- **Vercel:** Production hosting and deployment
-- **CSS:** Responsive visual system, themes and accessibility states
+- Clear visual hierarchy
+- Fast discovery
+- Responsive layouts
+- Museum atmosphere
+- Day/night presentation
+- Accessible controls
+- Consistent typography and spacing
+- Mobile-first interaction patterns
+- Clear loading and error feedback
 
-Server-side authorization is used for protected routes, while database Row Level Security provides an additional authorization boundary for museum data.
+The UI adapts collection grids, navigation, filters, modals, and interactive areas for desktop, tablet, and mobile screens.
 
-## Security
+## 7. Technology Stack
 
-Security is treated as part of the application architecture rather than only a frontend feature.
+### Frontend
 
-- Supabase Row Level Security protects database tables.
-- Protected routes perform server-side authentication and authorization checks.
-- Database roles distinguish authorized management users from regular visitors.
-- PostgreSQL constraints prevent unauthorized elevation to the designated administrator role.
-- Browser-exposed configuration uses only the Supabase publishable key.
-- Private credentials and service-role secrets are excluded from the repository.
+- Next.js 16
+- React 19
+- Next.js App Router
+- JavaScript / JSX
+- CSS
 
-## Accessibility
+### 3D
 
-The interface includes accessibility-oriented implementation details such as:
+- Three.js
+- React Three Fiber
+- Drei
+
+### Backend
+
+- Supabase
+- PostgreSQL
+- Supabase Auth
+- Row Level Security (RLS)
+
+### Deployment
+
+- Vercel
+
+### Source control
+
+- GitHub
+
+## 8. Architecture
+
+High-level application flow:
+
+    Visitor
+       |
+       v
+    Next.js application
+       |
+       +-- Museum UI
+       +-- Search / filters
+       +-- Artifact details
+       +-- Timeline
+       +-- 3D gallery
+                 |
+                 v
+          Three.js / R3F
+
+    Administrator
+       |
+       v
+    Supabase Auth
+       |
+       v
+    Server-side role check
+       |
+       v
+    Admin Panel
+       |
+       v
+    PostgreSQL + RLS
+
+Responsibilities are separated between route-level pages, reusable components, museum data, Supabase utilities, and protected server-side operations.
+
+## 9. Routes
+
+| Route | Purpose | Access |
+|---|---|---|
+| / | Main museum | Public |
+| /login | Authentication | Public |
+| /admin | Content management | Authorized users |
+| /loading | Loading UI | Framework state |
+| /error | Error UI | Framework state |
+| /not-found | Missing content UI | Framework state |
+
+The /admin page verifies the authenticated session and database role before rendering protected content.
+
+## 10. Authentication & RBAC
+
+Supabase Auth handles login sessions.
+
+Supported application roles:
+
+- admin
+- editor
+- viewer
+
+The authorization flow is:
+
+    /login
+       |
+       v
+    Supabase Auth
+       |
+       v
+    Authenticated session
+       |
+       v
+    Role lookup
+       |
+       +-- admin/editor --> /admin
+       |
+       +-- unauthorized --> /
+
+Public visitors do not receive administrative access.
+
+The project also has PostgreSQL enforcement for the single designated administrator identity. The administrator identity and password are intentionally not published in this README. Passwords and private credentials must never be committed to source control.
+
+## 11. Database
+
+### user_roles
+
+Associates authenticated users with application roles.
+
+### categories
+
+Stores museum categories including name, slug, description, and timestamps.
+
+### museum_items
+
+Stores museum collection data including title, slug, category, era, date label, item type, description, symbol, image URL, 3D model reference, and timestamps.
+
+## 12. Database Security
+
+Row Level Security protects database operations.
+
+The security model includes:
+
+- Public read access where appropriate
+- Authenticated management policies
+- Admin/editor role checks
+- Admin-only destructive operations
+- User-specific role visibility
+- PostgreSQL role constraints
+- Security-definer functions for controlled role checks
+
+Database authorization is therefore an independent security boundary and is not based only on hiding UI elements.
+
+## 13. Security
+
+The repository intentionally excludes:
+
+- Authentication passwords
+- Supabase service-role keys
+- Private API keys
+- Private credentials
+- Other secrets
+
+Browser configuration uses only the public Supabase configuration required by the application.
+
+If a secret is ever exposed, rotate it instead of committing it to Git history.
+
+## 14. Accessibility
+
+The application includes:
 
 - Keyboard-visible focus states
-- Semantic buttons and controls
+- Semantic interactive controls
 - Reduced-motion support
-- Responsive text and layouts
-- Clear interactive states
-- Error and loading feedback
+- Responsive layouts
+- Clear interaction states
+- Loading feedback
+- Error feedback
 - Mobile-friendly navigation
 
-## Performance & Reliability
+Important museum information is not dependent exclusively on 3D interaction.
 
-The application includes production-oriented states and safeguards:
+## 15. Performance & Reliability
 
-- Loading UI for asynchronous experiences
-- Error boundaries for recoverable application failures
+Production-oriented handling includes:
+
+- Loading UI
+- Error boundaries
 - Not-found handling
 - Responsive asset presentation
-- Progressive 3D loading behavior
-- Server-side authorization before protected content is rendered
+- Progressive 3D loading
+- Graceful unavailable-model handling
+- Server-side authorization
+- Separation of public browsing from administration
 
-## Project Goals
+## 16. Project Structure
 
-The project was built to demonstrate how a cultural institution could translate a physical museum experience into an engaging digital platform while keeping the experience:
+    egypt-digital-museum/
+    ├── app/
+    │   ├── page.jsx
+    │   ├── layout.jsx
+    │   ├── globals.css
+    │   ├── loading.jsx
+    │   ├── error.jsx
+    │   ├── not-found.jsx
+    │   ├── login/page.jsx
+    │   └── admin/page.jsx
+    ├── components/
+    │   ├── Navigation.jsx
+    │   ├── ArtifactCard.jsx
+    │   ├── ArtifactModal.jsx
+    │   ├── MuseumScene.jsx
+    │   └── AdminPanel.jsx
+    ├── data/
+    │   └── artifacts.js
+    ├── lib/
+    │   └── supabase/
+    │       ├── client.js
+    │       ├── server.js
+    │       └── proxy.js
+    ├── proxy.js
+    ├── vercel.json
+    ├── package.json
+    └── README.md
+
+## 17. Supabase Integration
+
+### lib/supabase/client.js
+
+Browser-side Supabase client.
+
+### lib/supabase/server.js
+
+Server-side Supabase access and authentication.
+
+### lib/supabase/proxy.js
+
+Supabase session handling within the Next.js request lifecycle.
+
+### proxy.js
+
+Integrates request/session handling with the application.
+
+## 18. Environment Variables
+
+Required local/Vercel configuration:
+
+    NEXT_PUBLIC_SUPABASE_URL=
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+
+Only public/publishable configuration should be browser-exposed.
+
+Never place service-role keys or passwords in README.md, source files, GitHub, or public environment variables.
+
+## 19. Local Development
+
+Requirements:
+
+- Node.js
+- npm
+- Git
+
+Install dependencies:
+
+    npm install
+
+Start development:
+
+    npm run dev
+
+Open:
+
+    http://localhost:3000
+
+## 20. Production Verification
+
+Build:
+
+    npm run build
+
+Start production server:
+
+    npm start
+
+## 21. Deployment
+
+The repository is connected to Vercel and production is deployed from the main branch.
+
+Deployment flow:
+
+    GitHub
+       |
+       v
+    main branch
+       |
+       v
+    Vercel build
+       |
+       v
+    Production deployment
+       |
+       v
+    Live museum
+
+Live site:
+
+https://egypt-digital-museum.vercel.app
+
+## 22. Code Quality
+
+The codebase separates responsibilities:
+
+- Pages compose route-level experiences.
+- Components provide reusable UI.
+- Data files separate museum content from presentation.
+- Supabase utilities isolate backend integration.
+- CSS manages responsive presentation and themes.
+- Server-side checks protect administrative routes.
+- PostgreSQL RLS provides database-level authorization.
+
+This structure makes the application easier to maintain and extend.
+
+## 23. Future Expansion
+
+The architecture can support:
+
+- More artifacts
+- More 3D models
+- Artifact image galleries
+- Audio guides
+- Multiple languages
+- Virtual exhibition rooms
+- Guided tours
+- Favorites/bookmarks
+- Advanced search
+- Educational activities
+- Visitor analytics
+- Expanded administration tools
+
+## 24. Project Goals
+
+The project is designed to be:
 
 1. Educational
 2. Interactive
@@ -134,62 +453,33 @@ The project was built to demonstrate how a cultural institution could translate 
 5. Maintainable
 6. Secure
 
-## Project structure
+## 25. CyberNex Context
 
-    app/
-      page.jsx
-      layout.jsx
-      globals.css
-      login/page.jsx
-      admin/page.jsx
-      loading.jsx
-      error.jsx
-      not-found.jsx
-    components/
-      Navigation.jsx
-      ArtifactCard.jsx
-      ArtifactModal.jsx
-      MuseumScene.jsx
-      AdminPanel.jsx
-    lib/supabase/
-      client.js
-      server.js
-      proxy.js
-    data/
-      artifacts.js
-    proxy.js
-    vercel.json
+The project was built to demonstrate:
 
-## Development
+- Functionality
+- Design and UX
+- Creativity
+- Clean code architecture
+- Documentation
+- Responsive web development
+- Interactive 3D technology
+- Secure backend integration
 
-    npm install
-    npm run dev
+## 26. Links
 
-Open http://localhost:3000.
+**GitHub:** https://github.com/manula961/egypt-digital-museum
 
-## Production check
+**Live website:** https://egypt-digital-museum.vercel.app
 
-    npm run build
-    npm start
+## 27. License
 
-## Environment variables
+No separate open-source license is currently specified. Unless a license is added to the repository, reuse and redistribution should not be assumed to be permitted.
 
-Set these in Vercel and local development:
+---
 
-    NEXT_PUBLIC_SUPABASE_URL=
-    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+## Final Summary
 
-Only the publishable Supabase key belongs in browser-exposed environment variables. Never commit a service-role or secret key.
+Egypt Digital Museum is a production-oriented digital heritage experience built with Next.js, React, Three.js, React Three Fiber, Supabase, PostgreSQL, and Vercel.
 
-## Security
-- Supabase RLS protects categories, museum items and user roles.
-- Authorization is checked server-side before rendering `/admin`.
-- PostgreSQL prevents any other email from receiving the `admin` role.
-- No passwords, private credentials, or service secrets are stored in the repository.
-
-## Deployment
-The repository is connected to Vercel and uses the Next.js framework. The production deployment is generated from the `main` branch.
-
-## Links
-- GitHub: https://github.com/manula961/egypt-digital-museum
-- Live site: https://egypt-digital-museum.vercel.app
+It combines cultural discovery, structured museum data, responsive UX, historical learning, interactive 3D visualization, authentication, role-based access control, and database-level security in one maintainable application.
