@@ -5,6 +5,7 @@ const models={
   narmer:"cdd70f3f6c0a4c8ab99db6ec9194f7da",
   djoser:"868a742ead1f4181bda326b37b0cd979",
   khufu:"01810314feca4415a33a51dd151eacb3",
+  khafre:"3417cf251498446a92cc5ee2eea12de5",
   sphinx:"b2b6cd14feed451b9ca8a13ff1fe0ff6",
   menkaure:"d82a055805c04ec099ddd02341aa7875",
   "rah":"be699d5cd26e4c2fa831cca6651b9212",
@@ -24,7 +25,8 @@ const models={
   edfu:"05f32f1da60f4cf58f8c95adc3fbfeb9",
   philae:"3f7df78558544bf09291937b06bf3e66",
   rosetta:"1e03509704a3490e99a173e53b93e282",
-  fayum:"a35b4e52b0a6433d9e7df11d6217f4e0"
+  fayum:"a35b4e52b0a6433d9e7df11d6217f4e0",
+  "queen-ti":"a32b591eb0b4408a86fe769fc677e43d"
 };
 
 export default function ArtifactModal({artifact,onClose}){
