@@ -25,42 +25,114 @@ An immersive, responsive digital museum experience built for the CyberNex projec
 - Admin/editor RBAC enforced by Supabase RLS
 - Single designated admin account: `admin@egyptdigitalmuseum.local`
 
-## Admin
-1. Open `/login`.
-2. Sign in with the designated Supabase Auth account.
-3. `/admin` is accessible only to authenticated users whose database role is `admin` or `editor`.
-4. Only `admin@egyptdigitalmuseum.local` may hold the `admin` role; this restriction is enforced in PostgreSQL.
-5. Regular visitors and authenticated users without an authorized role are redirected away from `/admin`.
+## Project Overview
 
-The admin account is intentionally a project-only virtual identity. No password or service-role credential is stored in this repository.
+Egypt Digital Museum is an interactive web experience that presents ancient Egyptian heritage through a modern digital interface. The project combines a searchable artifact collection, historical context, interactive visualization, responsive layouts, and a protected content-management area.
 
-## Judge Profile
+### Core experience
 
-### Competition Judge Access
+- **Discover:** Browse a curated collection of Egyptian artifacts.
+- **Search:** Find artifacts quickly by title and descriptive content.
+- **Explore by era:** Filter the collection across major historical periods.
+- **Explore by category:** Browse architecture, sculpture, royal art, funerary art, writing, jewelry and craft, and religious art.
+- **Learn:** Open detailed artifact views with historical descriptions and metadata.
+- **Visualize:** Explore the interactive Three.js/R3F gallery and available 3D artifact models.
+- **Follow the timeline:** Move through key periods of ancient Egyptian history.
+- **Personalize:** Switch between museum day and night presentation modes.
+- **Use on any device:** Responsive layouts support desktop, tablet and mobile screens.
 
-- **Role:** Competition Judge
-- **Demo account:** `admin@egyptdigitalmuseum.local`
-- **Login page:** `/login`
-- **Admin dashboard:** `/admin`
-- **Access level:** Full museum administration demo
-- **Password:** Provided separately to authorized judges
+## Design & UX
 
-### What judges can review
+The interface is designed around a museum-inspired visual language while keeping navigation familiar and accessible.
 
-- Responsive museum experience
-- Artifact collection and search
-- Era and category filtering
-- Artifact detail views
-- Interactive 3D gallery
-- Timeline experience
-- Day/night mode
-- Mobile navigation
-- Supabase-backed museum content
-- Protected admin dashboard
-- Role-based access control
-- Security and RLS enforcement
+- Responsive grid and mobile-first navigation
+- Clear information hierarchy for artifact discovery
+- Search and filtering designed for fast exploration
+- Accessible focus states and semantic interactive controls
+- Reduced-motion considerations
+- Loading, error and not-found states
+- Day/night presentation mode
+- Interactive artifact detail modal
+- 3D visualization separated from the main collection flow for progressive exploration
 
-> **Judge note:** The admin account is a project-only virtual identity created for the competition. The authentication password is intentionally kept out of the public repository.
+## Collection & Data
+
+The application supports a structured museum catalog containing **74 collection objects** with metadata such as:
+
+- Title and slug
+- Historical era and date label
+- Museum category
+- Artifact type
+- Description
+- Symbol/icon
+- Optional image
+- Optional 3D model reference
+
+Museum categories and editable content can be stored in Supabase PostgreSQL, allowing the collection to evolve without rebuilding the complete frontend catalog.
+
+## Interactive 3D Gallery
+
+The museum includes a Three.js-powered 3D experience built with React Three Fiber and Drei.
+
+The gallery is designed to demonstrate how cultural objects can be presented beyond static images, with interactive camera and object presentation where supported. The application also includes graceful handling for models that are unavailable or still loading.
+
+## Architecture
+
+The project uses a modern Next.js App Router architecture:
+
+- **Next.js:** Application framework, routing and server rendering
+- **React:** Component-based UI
+- **React Three Fiber / Drei / Three.js:** 3D museum experiences
+- **Supabase:** Authentication, PostgreSQL data and Row Level Security
+- **Vercel:** Production hosting and deployment
+- **CSS:** Responsive visual system, themes and accessibility states
+
+Server-side authorization is used for protected routes, while database Row Level Security provides an additional authorization boundary for museum data.
+
+## Security
+
+Security is treated as part of the application architecture rather than only a frontend feature.
+
+- Supabase Row Level Security protects database tables.
+- Protected routes perform server-side authentication and authorization checks.
+- Database roles distinguish authorized management users from regular visitors.
+- PostgreSQL constraints prevent unauthorized elevation to the designated administrator role.
+- Browser-exposed configuration uses only the Supabase publishable key.
+- Private credentials and service-role secrets are excluded from the repository.
+
+## Accessibility
+
+The interface includes accessibility-oriented implementation details such as:
+
+- Keyboard-visible focus states
+- Semantic buttons and controls
+- Reduced-motion support
+- Responsive text and layouts
+- Clear interactive states
+- Error and loading feedback
+- Mobile-friendly navigation
+
+## Performance & Reliability
+
+The application includes production-oriented states and safeguards:
+
+- Loading UI for asynchronous experiences
+- Error boundaries for recoverable application failures
+- Not-found handling
+- Responsive asset presentation
+- Progressive 3D loading behavior
+- Server-side authorization before protected content is rendered
+
+## Project Goals
+
+The project was built to demonstrate how a cultural institution could translate a physical museum experience into an engaging digital platform while keeping the experience:
+
+1. Educational
+2. Interactive
+3. Responsive
+4. Accessible
+5. Maintainable
+6. Secure
 
 ## Project structure
 
