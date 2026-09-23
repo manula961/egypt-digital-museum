@@ -17,6 +17,15 @@ const categoryMap = [
   ["Craft","Furniture, jewelry & vessels","𓆑"]
 ];
 
+const categoryMatchers = {
+  Architecture: ["architecture", "monument", "tomb"],
+  Sculpture: ["sculpture", "sphinx", "statue", "relief"],
+  "Royal Art": ["royal", "king", "queen", "pharaoh"],
+  Funerary: ["funerary", "mummy", "coffin", "papyrus", "shabti", "canopic", "tomb"],
+  Writing: ["writing", "stela", "inscription", "papyrus", "ostraca", "letters"],
+  Craft: ["furniture", "jewelry", "jewellery", "vessel", "dagger", "craft", "equipment"]
+};
+
 export default function Home(){
   const [query,setQuery]=useState("");
   const [era,setEra]=useState("All");
@@ -27,7 +36,7 @@ export default function Home(){
     const q=query.trim().toLowerCase();
     return artifacts.filter(a=>
       (era==="All"||a.era===era) &&
-      (category==="All"||a.type.toLowerCase().includes(category.toLowerCase().replace("funerary","funerary").replace("craft","furniture"))) &&
+      (category==="All"||(categoryMatchers[category]||[]).some(term=>a.type.toLowerCase().includes(term))) &&
       (!q||`${a.title} ${a.text} ${a.type} ${a.era}`.toLowerCase().includes(q))
     );
   },[query,era,category]);
