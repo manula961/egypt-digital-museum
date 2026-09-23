@@ -13,6 +13,7 @@ const models={
   "khafre-statue":"071b25978c054c73bd179f89c33a5ffe",
   senusret:"eca243532f714649a3166cd6ec000705",
   mentuhotep:"a3349ff11319477283d0551b9af907ed",
+  hatshepsut:"93ecef7a7bd6461abd6a7f3e21a7f099",
   "hatshepsut-temple":"5bc88658fc5e458f8f25af8a0ac9ee7b",
   "tut-mask":"992c57047cdf4412b970ad798d5ad0c9",
   "tut-dagger":"505fdc27fc1a4fcaa0e2239fb4b36f99",
