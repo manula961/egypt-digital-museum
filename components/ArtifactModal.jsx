@@ -31,7 +31,16 @@ const models={
 };
 
 export default function ArtifactModal({artifact,onClose}){
-  useEffect(()=>{if(!artifact)return;const onKey=e=>e.key==="Escape"&&onClose();document.addEventListener("keydown",onKey);const previous=document.activeElement;return()=>{document.removeEventListener("keydown",onKey);previous?.focus?.()}},[artifact,onClose]);
+  useEffect(()=>{
+  if(!artifact)return;
+  const previous=document.activeElement;
+  const onKey=e=>{if(e.key==="Escape")onClose()};
+  document.addEventListener("keydown",onKey);
+  const previousOverflow=document.body.style.overflow;
+  document.body.style.overflow="hidden";
+  requestAnimationFrame(()=>document.querySelector(".modal .close")?.focus());
+  return()=>{document.removeEventListener("keydown",onKey);document.body.style.overflow=previousOverflow;previous?.focus?.()};
+},[artifact,onClose]);
   if(!artifact)return null;
   const model=models[artifact.id];
   const search=`https://sketchfab.com/3d-models?features=downloadable&q=${encodeURIComponent(artifact.title)}`;
