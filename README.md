@@ -34,6 +34,34 @@ An immersive, responsive digital museum experience built for the CyberNex projec
 
 The admin account is intentionally a project-only virtual identity. No password or service-role credential is stored in this repository.
 
+## Judge Profile
+
+### Competition Judge Access
+
+- **Role:** Competition Judge
+- **Demo account:** `admin@egyptdigitalmuseum.local`
+- **Login page:** `/login`
+- **Admin dashboard:** `/admin`
+- **Access level:** Full museum administration demo
+- **Password:** Provided separately to authorized judges
+
+### What judges can review
+
+- Responsive museum experience
+- Artifact collection and search
+- Era and category filtering
+- Artifact detail views
+- Interactive 3D gallery
+- Timeline experience
+- Day/night mode
+- Mobile navigation
+- Supabase-backed museum content
+- Protected admin dashboard
+- Role-based access control
+- Security and RLS enforcement
+
+> **Judge note:** The admin account is a project-only virtual identity created for the competition. The authentication password is intentionally kept out of the public repository.
+
 ## Project structure
 
     app/
