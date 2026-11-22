@@ -6,12 +6,33 @@
   <img src="docs/readme-cover.svg" alt="Egypt Digital Museum project illustration" width="1120">
 </p>
 
-<p align="center">
-  <a href="#project-summary">Project summary</a> · <a href="#2-visitor-experience">Visitor Experience</a> · <a href="#5-3d-gallery">3D Gallery</a> · <a href="#19-local-development">Local Development</a>
-</p>
+<p align="center"><a href="#project-summary">Project summary</a> · <a href="#quick-start">Quick start</a> · <a href="#project-reference">Project reference</a></p>
 
----
+## Project summary
 
+Explore ancient Egypt through a searchable artifact collection, a historical timeline, and interactive 3D models.
+
+| 🏺 Collection | 🗺️ Timeline | 🧊 3D gallery |
+| --- | --- | --- |
+| [Browse the artifact data](data/artifacts.js) | [Follow the eras in the museum](app/page.jsx) | [Explore the gallery implementation](components/MuseumScene.jsx) |
+
+[Open the museum](https://egypt-digital-museum.vercel.app) · [Admin route](app/admin/page.jsx)
+
+## Quick start
+
+Use Node.js 24.
+
+```sh
+npm install
+npm run dev
+```
+
+The public collection is bundled with the app. The admin area requires Supabase configuration.
+
+## Project reference
+
+<details>
+<summary>Expand detailed documentation</summary>
 
 > A responsive, interactive digital museum experience for exploring ancient Egyptian heritage.
 
@@ -19,7 +40,7 @@
 **Vercel:** https://egypt-digital-museum.vercel.app  
 **GitHub:** https://github.com/manula961/egypt-digital-museum
 
-## Project summary
+## Detailed overview
 
 The public museum lets visitors browse and filter artifacts, open object details, and follow a historical timeline. The public page imports its collection from [the bundled artifact data](data/artifacts.js) and loads [the WebGL gallery](components/MuseumScene.jsx) on the client.
 
@@ -545,3 +566,5 @@ No separate open-source license is currently specified. Unless a license is adde
 Egypt Digital Museum is a production-oriented digital heritage experience built with Next.js, React, Three.js, React Three Fiber, Supabase, PostgreSQL, and Vercel.
 
 It combines cultural discovery, structured museum data, responsive UX, historical learning, interactive 3D visualization, authentication, role-based access control, and database-level security in one maintainable application.
+
+</details>
