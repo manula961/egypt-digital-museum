@@ -37,6 +37,17 @@ The public museum can be explored without an account. Administrative functionali
 
 ## 2. Visitor Experience
 
+```mermaid
+flowchart LR
+  A["Browse the collection"] --> B["Filter by era or category"] --> C["Open artifact details"] --> D["Explore a 3D model"]
+  classDef primary fill:#92400e,stroke:#92400e,color:#fff
+  classDef accent fill:#0f766e,stroke:#0f766e,color:#fff
+  class A primary
+  class B accent
+  class C primary
+  class D accent
+```
+
 Visitors can:
 
 - Browse a curated collection of 74 museum objects.
@@ -80,7 +91,17 @@ Visitors can:
 - Admin-only destructive actions
 - PostgreSQL Row Level Security
 
+---
+
 ## 4. Collection
+
+**Explore the exhibit**
+
+| Area | Start here |
+| --- | --- |
+| Collection | [Browse artifact data](data/artifacts.js) |
+| Timeline | [See how the public page presents each period](app/page.jsx) |
+| 3D gallery | [Open the scene component](components/MuseumScene.jsx) |
 
 The current collection contains 74 objects.
 
@@ -112,6 +133,9 @@ Each museum item can contain:
 
 ## 5. 3D Gallery
 
+> [!NOTE]
+> Artifact details remain available when a 3D model fails to load.
+
 The interactive gallery uses:
 
 - Three.js
@@ -140,6 +164,8 @@ Design goals include:
 - Clear loading and error feedback
 
 The UI adapts collection grids, navigation, filters, modals, and interactive areas for desktop, tablet, and mobile screens.
+
+---
 
 ## 7. Technology Stack
 
@@ -219,6 +245,8 @@ Responsibilities are separated between route-level pages, reusable components, m
 
 The /admin page verifies the authenticated session and database role before rendering protected content.
 
+---
+
 ## 10. Authentication & RBAC
 
 Supabase Auth handles login sessions.
@@ -293,6 +321,8 @@ The repository intentionally excludes:
 Browser configuration uses only the public Supabase configuration required by the application.
 
 If a secret is ever exposed, rotate it instead of committing it to Git history.
+
+---
 
 ## 14. Accessibility
 
@@ -381,6 +411,8 @@ Only public/publishable configuration should be browser-exposed.
 
 Never place service-role keys or passwords in README.md, source files, GitHub, or public environment variables.
 
+---
+
 ## 19. Local Development
 
 Requirements:
@@ -452,6 +484,8 @@ The codebase separates responsibilities:
 - PostgreSQL RLS provides database-level authorization.
 
 This structure makes the application easier to maintain and extend.
+
+---
 
 ## 23. Future Expansion
 
