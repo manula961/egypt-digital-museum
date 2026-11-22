@@ -3,9 +3,7 @@
 <p align="center"><strong>Explore ancient Egypt through artifacts, timelines, and 3D exhibits.</strong></p>
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/static/v1?label=&amp;message=Next.js&amp;color=92400E&amp;style=for-the-badge">
-  <img alt="Three.js" src="https://img.shields.io/static/v1?label=&amp;message=Three.js&amp;color=A16207&amp;style=for-the-badge">
-  <img alt="Supabase" src="https://img.shields.io/static/v1?label=&amp;message=Supabase&amp;color=0F766E&amp;style=for-the-badge">
+  <img src="docs/readme-cover.svg" alt="Egypt Digital Museum project illustration" width="1120">
 </p>
 
 <p align="center">
