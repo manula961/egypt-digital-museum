@@ -1,4 +1,19 @@
-# Egypt Digital Museum 🏺
+<h1 align="center">🏺 Egypt Digital Museum</h1>
+
+<p align="center"><strong>Explore ancient Egypt through artifacts, timelines, and 3D exhibits.</strong></p>
+
+<p align="center">
+  <img alt="Next.js" src="https://img.shields.io/static/v1?label=&amp;message=Next.js&amp;color=92400E&amp;style=for-the-badge">
+  <img alt="Three.js" src="https://img.shields.io/static/v1?label=&amp;message=Three.js&amp;color=A16207&amp;style=for-the-badge">
+  <img alt="Supabase" src="https://img.shields.io/static/v1?label=&amp;message=Supabase&amp;color=0F766E&amp;style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="#project-summary">Project summary</a> · <a href="#2-visitor-experience">Visitor Experience</a> · <a href="#5-3d-gallery">3D Gallery</a> · <a href="#19-local-development">Local Development</a>
+</p>
+
+---
+
 
 > A responsive, interactive digital museum experience for exploring ancient Egyptian heritage.
 
