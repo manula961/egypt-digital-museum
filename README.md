@@ -32,7 +32,7 @@ The public collection is bundled with the app. The admin area requires Supabase 
 ## Project reference
 
 <details>
-<summary>Expand detailed documentation</summary>
+<summary><strong>🏺 Collection, timeline, and 3D gallery</strong></summary>
 
 > A responsive, interactive digital museum experience for exploring ancient Egyptian heritage.
 
@@ -185,6 +185,11 @@ Design goals include:
 The UI adapts collection grids, navigation, filters, modals, and interactive areas for desktop, tablet, and mobile screens.
 
 ---
+
+</details>
+
+<details>
+<summary><strong>🧩 Architecture and administration</strong></summary>
 
 ## 7. Technology Stack
 
@@ -418,6 +423,11 @@ Supabase session handling within the Next.js request lifecycle.
 ### proxy.js
 
 Integrates request/session handling with the application.
+
+</details>
+
+<details>
+<summary><strong>⚙️ Local setup, deployment, and project history</strong></summary>
 
 ## 18. Environment Variables
 
