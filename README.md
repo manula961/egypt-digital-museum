@@ -6,6 +6,14 @@
 **Vercel:** https://egypt-digital-museum.vercel.app  
 **GitHub:** https://github.com/manula961/egypt-digital-museum
 
+## Project summary
+
+The public museum lets visitors browse and filter artifacts, open object details, and follow a historical timeline. The public page imports its collection from [the bundled artifact data](data/artifacts.js) and loads [the WebGL gallery](components/MuseumScene.jsx) on the client.
+
+The [administration route](app/admin/page.jsx) checks Supabase authentication and admits users with an admin or editor role. [The admin panel](components/AdminPanel.jsx) provides the collection management interface. The public collection and the administrative interface have distinct data paths.
+
+The project uses Next.js, React, Three.js, React Three Fiber, and Supabase. [The package manifest](package.json) specifies Node.js 24 and the available build and development commands.
+
 ## 1. Overview
 
 Egypt Digital Museum is a full-stack Next.js application created for the CyberNex project. It combines a searchable museum collection, historical learning, interactive 3D visualization, responsive design, day/night presentation, authentication, RBAC, and a Supabase-powered content management system.
